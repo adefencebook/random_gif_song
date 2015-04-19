@@ -1,4 +1,13 @@
-<% @tracks.each do |song| %>
-	Song name: <%= song.title %> <br>
-<!-- song.artwork_url, song.stream_url, song.user.username -->
-<% end %>
+<!doctype html>
+  <head>
+    <title> results_page </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body id="results_page_body">
+    <% @tracks.each do |song| %>
+  	   Song name: <%= song.title %> <br>
+      Artist Picture <br> <% song.artwork_url %>
+      <!-- song.artwork_url, song.stream_url, song.user.username -->
+    <% end %>
+  </body>
+</html>
