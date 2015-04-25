@@ -1,10 +1,10 @@
-homepage_body {
-  background-image: music.img;
+#homepage_body {
+  background-image: '../music.jpg';
   text-align: center;
 }
 
-results_page_body {
-  background-image: pick_a_song.img;
+#results_page_body {
+  background-image: '../pick_a_song.img';
   text-align: center;
 }
 
