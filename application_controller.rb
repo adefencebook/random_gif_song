@@ -11,7 +11,6 @@ class ApplicationController < Sinatra::Base
   post '/results' do
 	results = HomepageAPI.new(params["genre"])
 	@songs = results.create_song_object
-	binding.pry
 	erb :results_page
   end
 

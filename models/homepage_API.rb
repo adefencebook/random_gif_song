@@ -28,5 +28,3 @@ class HomepageAPI
 
 
 end
-
-Song.new("Pop")

@@ -4,11 +4,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body id="results_page_body">
-    <% @tracks.each do |song| %>
+    <%= @tracks.each do |song| %>
   	   <img src="<%=song.artwork_url%>">
 
        <id="Song_Title"> <%= song.title %></id="Song_Title"> <%=song.sharing%><br>
       
-    <% end %>
+    <%= end %>
   </body>
 </html>
