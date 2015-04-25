@@ -1,14 +1,11 @@
 <!doctype html>
   <head>
     <title> results_page </title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/results.css">
   </head>
   <body id="results_page_body">
-    <%= @tracks.each do |song| %>
-  	   <img src="<%=song.artwork_url%>">
-
-       <id="Song_Title"> <%= song.title %></id="Song_Title"> <%=song.sharing%><br>
-      
-    <%= end %>
+    <%@songs.each do |song|%>
+    <p><%=song.song_name%></p>
+    <%end%>
   </body>
 </html>

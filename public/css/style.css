@@ -1,18 +1,10 @@
-#homepage_body {
-  background-image: '../music.jpg';
+body {
+  background-image: url('../images/music.jpg');
+  background-repeat: repeat-x;
   text-align: center;
+  color: white;
 }
-
-#results_page_body {
-  background-image: '../pick_a_song.img';
-  text-align: center;
-}
-
-#Artist_Picture {
-/*  border-color: red;
-  border-width: 7px;
-}*/
-
+/*
 Song_Title{
   text-align: center;
-}
+}*/

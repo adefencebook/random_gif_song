@@ -13,8 +13,4 @@ class ApplicationController < Sinatra::Base
 	@songs = results.create_song_object
 	erb :results_page
   end
-
-  get '/results' do
-
-  end 
 end
