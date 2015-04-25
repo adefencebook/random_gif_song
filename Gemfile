@@ -4,4 +4,5 @@ source "https://rubygems.org"
 gem 'shotgun'
 gem 'pry'
 gem 'sinatra'
-gem 'soundcloud'
+gem 'echonest-ruby-api'
+gem 'rspotify'
