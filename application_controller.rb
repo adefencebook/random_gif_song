@@ -8,8 +8,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/results' do
-  	genre = HomepageAPI.new(params["genre"])
-	@tracks = genre.get_tracks
-	erb :results_page
+   genre = HomepageAPI.new(params["genre"])
+	 @tracks = genre.get_tracks
+	 erb :results_page
   end
+
+  get '/results' do
+
+  end 
 end

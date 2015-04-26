@@ -5,9 +5,10 @@
   </head>
   <body id="results_page_body">
     <% @tracks.each do |song| %>
-  	   Song name: <%= song.title %> <br>
-       <a ="song.stream_url"><id="Artist_Picture">Artist Picture <br> <% song.artwork_url %> </id="Artist_Picture"></a>
-      <!-- song.artwork_url, song.stream_url, song.user.username -->
+  	   <img src="<%=song.artwork_url%>">
+
+       <id="Song_Title"> <%= song.title %></id="Song_Title"> <%=song.sharing%><br>
+      
     <% end %>
   </body>
 </html>

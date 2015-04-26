@@ -1,6 +1,6 @@
 class HomepageAPI
 	def initialize(genre)
-		@client = Soundcloud.new(:client_id => '5248c565d4dbf79c9f59271299fd4302')
+		
 		@genre = genre
 	end
 

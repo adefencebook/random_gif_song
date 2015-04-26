@@ -6,7 +6,11 @@ results_page_body {
   background-image: results_page_image.img
 }
 
-Artist_Picture {
-  border-color: red;
+#Artist_Picture {
+/*  border-color: red;
   border-width: 7px;
+}*/
+
+Song_Title{
+  text-align: center;
 }
