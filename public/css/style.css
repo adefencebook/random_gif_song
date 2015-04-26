@@ -1,9 +1,11 @@
 homepage_body {
   background-image: homepage_body_image.img;
+  text-align: center;
 }
 
 results_page_body {
   background-image: results_page_image.img
+  text-align: center;
 }
 
 #Artist_Picture {
