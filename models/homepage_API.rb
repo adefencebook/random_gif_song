@@ -5,6 +5,7 @@ class HomepageAPI
 	def initialize(genre)
 		@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', genre.downcase)
 		@songs = []
+		@videos = []
 	end
 
 	def get_random_artists
@@ -26,5 +27,11 @@ class HomepageAPI
 		@songs
 	end
 
+	def find_youtube_vid
+		@songs.each do |song|
+			@videos << Youtube_vid.new(song.song_name)
+		end
+		@videos
+	end
 
 end
