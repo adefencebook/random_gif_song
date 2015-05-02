@@ -1,4 +1,18 @@
 #results_page_body {
-  background-image: pick_a_song.jmg;
+  background-image: url('../images/music_2.jpg');
   text-align: center;
+}
+#standard{
+	border: 5px inset #33FFCC;
+	padding:3px;
+	margin: auto;  
+	  
+	  left:0;
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  width: 400px;
+}
+#mega{
+	position: relative;
 }

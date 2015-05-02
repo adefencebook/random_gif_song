@@ -4,11 +4,20 @@
     <link rel="stylesheet" type="text/css" href="css/results.css">
   </head>
   <body id="results_page_body">
+  	<h1>天国</h1>
+  <div id="mega">
     <%@songs.each do |song|%>
-    <p><%=song.song_name%></p>
-    <p>This song is by: <%=song.artist_name%></p>
-    <p>For this figure out how to embed an audio track in html. <%=song.preview_url%></p>
-    <p>This song is explicit: <%=song.explicit%></p>
+    <div id="standard">
+	    <h3><%=song.song_name%></h3>
+	    <p>This song is by: <%=song.artist_name%></p>
+	    <% if song.explicit ==true %>
+	    	This song is explicit.
+	    <% end %><br>
+	    <audio controls>
+	     <source src=<%=song.preview_url%>></source>
+	 	</audio>
+	 </div>
     <%end%>
+   </div>
   </body>
 </html>
