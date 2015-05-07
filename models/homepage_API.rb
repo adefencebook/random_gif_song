@@ -29,7 +29,7 @@ class HomepageAPI
 
 	def find_youtube_vid
 		@songs.each do |song|
-			@videos << Youtube_vid.new(song.song_name)
+			@videos << Youtube_vid.new(song.song_name, song.artist_name)
 		end
 		@videos
 	end
