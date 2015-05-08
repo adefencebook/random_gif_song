@@ -1,15 +1,34 @@
 <!doctype html>
 	<head> 
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 		<title>Genre Song Finder</title>
     	<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body id="homepage_body">
-		<h1>こんにちは‼ 元気です？</h1>
+		<h1>Need some song inspo?  We've got you covered!</h1>
 		<h2>Input any genre of music.</h2>
-		<p>Made by Marco Heincrichs, Patrick Huang, Duncan Mcconnell, and Chiara Nilsson-Salvati</p>
+		
 		<form action="/results" method="post">
 			<input type="text" name="genre">
 			<input type="submit">
-		</form> 
+		</form>
+		<div class="stuck">
+			<h3>Stuck?  Here are some of our favorite genres:</h3>
+			<ul>
+				<li class="align-left">dance pop</li>
+				<li class="align-left">a cappella</li>
+				<li class="align-left">classic rock</li>
+				<li class="align-left">doo-wop</li>
+				<li class="align-left">hip hop</li>
+				<div id="rightalign">
+					<li class="align-right">gangster rap</li>
+					<li class="align-right">country blues</li>
+					<li class="align-right">deep surf music</li>
+					<li class="align-right">acoustic pop</li>
+					<li class="align-right">indian classical</li>
+				</div>
+			</ul>
+		</div>
+		<p>Made by Marco Heincrichs, Patrick Huang, Duncan Mcconnell, and Chiara Nilsson-Salvati</p>
 	</body>
 </html>
