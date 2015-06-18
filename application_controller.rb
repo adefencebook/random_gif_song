@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/results' do
 	results = HomepageAPI.new(params["genre"])
+	@genre_is = results.what_is_genre
 	@both = results.song_video_hash
 	@sim_genres = results.find_similar_genres
 	erb :results_page

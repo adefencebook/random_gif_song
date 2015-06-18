@@ -2,9 +2,10 @@ require_relative 'song.rb'
 require_relative 'youtube_scraper.rb'
 
 class HomepageAPI
-	attr_accessor :songs, :videos
+	attr_accessor :songs, :videos, :what_is_genre
 
 	def initialize(genre)
+		@what_is_genre = genre
 		@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', genre.downcase)
 		@artists = []
 		@names = []

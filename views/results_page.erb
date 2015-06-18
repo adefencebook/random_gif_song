@@ -1,28 +1,38 @@
 <!doctype html>
   <head>
     <title> Results </title>
+    <link rel="shortcut icon" href="images/note.ico">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/results.css">
   </head>
   <body>
-  	<h1>Results</h1>
+  	<h1>Results for <%=@genre_is%></h1>
   <div id="mega">
     <%@both.each_value do |hash|%>
 		
 		<div id="standard">
     		<h3><%=hash[:song].song_name%></h3>
-    		<p>This song is by: <%=hash[:song].artist_name%></p>
+    		<p id="artist">This song is by <%=hash[:song].artist_name%></p>
     		<% if hash[:song].explicit ==true %>
-    			This song is explicit.
+    		<p id="explicit">This song is explicit.</p>
     		<%end%>
     		<br>
- 			<iframe width="420" height="315" src="https://www.youtube.com/embed/<%= hash[:video].video_watch_code %>"frameborder="0" allowfullscreen></iframe>
+ 			<iframe src="https://www.youtube.com/embed/<%= hash[:video].video_watch_code %>"frameborder="0" allowfullscreen></iframe>
  		</div>
+ 		<div id="break"><br></div>
     <%end%>
     <h3>You may also enjoy:</h3>
+    <ul>
     <%@sim_genres.each do |genre|%>
-    	<h4><%=genre[:name]%></h4>
+    	<li id="sim-genres-list"><%=genre[:name]%></li>
     <%end%>
+	</ul>
+	<br><br><br>
+    <h3>Pick another genre!</h3>
+    <form action="/results" method="post">
+		<input type="text" name="genre">
+		<input type="submit">
+	</form>
    </div>
   </body>
 </html>

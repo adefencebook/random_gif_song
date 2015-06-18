@@ -5,14 +5,88 @@ body {
   font-family: 'Roboto', arial;
 }
 
+p#explicit {
+	font-size: 15px;
+	line-height: 0.72em;
+	display: inline;
+}
+
+p#explicit {
+	display: inline;
+}
+
+li#sim-genres-list {
+	width: 25%;
+	float: left;
+	font-weight: 200;
+	list-style-type: none;
+}
+
+#mega{
+	position: relative;
+}
+
 div#standard{
 	border-style: double;
 	border-color: white;
-	width: 70%;
+	width: 860px;
+	height: 440px;
 	padding:3px;
 	margin: auto;
 	padding-bottom: 20em;
 }
-#mega{
-	position: relative;
+
+iframe {
+	width: 840px;
+	height: 630px;
 }
+
+@media screen and (max-width: 415px) {
+	iframe {
+		width: 133.333px;
+		height: 100px;
+	}
+	div#standard {
+		width: 215px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	iframe {
+		width: 200px;
+		height: 150px;
+	}
+	div#standard {
+		width: 215px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	iframe {
+		width: 300px;
+		height: 230px;
+	}
+	div#standard {
+		width: 320px;
+		height: 85px;
+	}
+	li#sim-genres-list {
+	width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	iframe {
+		width: 533.3333px;
+		height: 400px;
+	}
+	div#standard {
+		width: 550px;
+		height: 210px;
+	}
+}
+
+/*width="420" height="315"
+multiply height by 1.33333333 to get proportional width*/
