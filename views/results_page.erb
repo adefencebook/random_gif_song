@@ -1,10 +1,11 @@
 <!doctype html>
   <head>
-    <title> results_page </title>
+    <title> Results </title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/results.css">
   </head>
-  <body id="results_page_body">
-  	<h1>天国</h1>
+  <body>
+  	<h1>Results</h1>
   <div id="mega">
     <%@both.each_value do |hash|%>
 		
@@ -13,8 +14,9 @@
     		<p>This song is by: <%=hash[:song].artist_name%></p>
     		<% if hash[:song].explicit ==true %>
     			This song is explicit.
-    		<% end %><br>
- 			<iframe width="420" height="315" src="https://www.youtube.com/embed/#{hash[:video].video_watch_code}" frameborder="0" allowfullscreen></iframe>
+    		<%end%>
+    		<br>
+ 			<iframe width="420" height="315" src="https://www.youtube.com/embed/<%= hash[:video].video_watch_code %>"frameborder="0" allowfullscreen></iframe>
  		</div>
     <%end%>
     <h3>You may also enjoy:</h3>

@@ -1,17 +1,17 @@
-#results_page_body {
-  background-image: url('../images/music_2.jpg');
+body {
+  background-color: #a00fa8;
   text-align: center;
+  color: white;
+  font-family: 'Roboto', arial;
 }
-#standard{
-	border: 5px inset #33FFCC;
+
+div#standard{
+	border-style: double;
+	border-color: white;
+	width: 70%;
 	padding:3px;
-	margin: auto;  
-	  
-	  left:0;
-	  right: 0;
-	  top: 0;
-	  bottom: 0;
-	  width: 400px;
+	margin: auto;
+	padding-bottom: 20em;
 }
 #mega{
 	position: relative;

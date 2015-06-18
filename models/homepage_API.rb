@@ -6,15 +6,32 @@ class HomepageAPI
 
 	def initialize(genre)
 		@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', genre.downcase)
+		@artists = []
+		@names = []
 		@songs = []
 		@videos = []
 		@sim_genres = []
 		@both = {
-			:a => {},
-			:b => {},
-			:c => {},
-			:d => {},
-			:e => {}
+			:a => {
+				:song => nil,
+				:video => nil,
+				},
+			:b => {
+				:song => nil,
+				:video => nil,
+				},
+			:c => {
+				:song => nil,
+				:video => nil,
+				},
+			:d => {
+				:song => nil,
+				:video => nil,
+				},
+			:e => {
+				:song => nil,
+				:video => nil,
+			}
 		}
 	end
 
@@ -45,10 +62,10 @@ class HomepageAPI
 	end
 
 	def song_video_hash
+		x = 0
 		self.create_song_object
 		self.find_youtube_vid
 		@both.each_value do |hash|
-			x = 0
 			if x < 5
 				hash[:song] = @songs[x]
 				hash[:video] = @videos[x]
