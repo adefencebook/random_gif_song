@@ -5,13 +5,18 @@ body {
   font-family: 'Roboto', arial;
 }
 
-p#explicit {
-	font-size: 15px;
-	line-height: 0.72em;
-	display: inline;
+h3.pick-genre-text {
+	text-align: center;
+}
+
+div.pick-genre-text {
+	display: inline-block;
+	text-align: center;
 }
 
 p#explicit {
+	font-size: 15px;
+	line-height: 0.72em;
 	display: inline;
 }
 
@@ -66,7 +71,7 @@ iframe {
 @media screen and (max-width: 800px) {
 	iframe {
 		width: 300px;
-		height: 230px;
+		height: 1000px;
 	}
 	div#standard {
 		width: 320px;
