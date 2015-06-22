@@ -2,7 +2,7 @@ require_relative 'song.rb'
 require_relative 'youtube_scraper.rb'
 
 class HomepageAPI
-	attr_accessor :songs, :videos, :what_is_genre
+	attr_accessor :songs, :videos, :what_is_genre, :description, :genre
 
 	def initialize(genre)
 		@what_is_genre = genre
@@ -80,7 +80,10 @@ class HomepageAPI
 		@similars.each do |genre|
 			@sim_genres << genre[:name]
 		end
-
 	end
 
+	def find_description
+		@description = @genre.profile(bucket: "description")[:genres][0][:description]
+		@description
+	end
 end

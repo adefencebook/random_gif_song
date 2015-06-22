@@ -15,6 +15,7 @@ class ApplicationController < Sinatra::Base
 	@genre_is = results.what_is_genre
 	@both = results.song_video_hash
 	@sim_genres = results.find_similar_genres
+	@descrip = results.find_description
 	erb :results_page
   end
   

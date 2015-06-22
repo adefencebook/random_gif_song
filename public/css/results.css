@@ -5,6 +5,13 @@ body {
   font-family: 'Roboto', arial;
 }
 
+h5 {
+	font-size: 1em;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-weight: 200;
+}
+
 h3.pick-genre-text {
 	text-align: center;
 }
@@ -23,7 +30,7 @@ p#explicit {
 li#sim-genres-list {
 	width: 25%;
 	float: left;
-	font-weight: 200;
+	font-weight: lighter;
 	list-style-type: none;
 }
 
@@ -46,7 +53,7 @@ iframe {
 	height: 630px;
 }
 
-/*@media screen and (max-width: 415px) {
+@media screen and (max-width: 415px) {
 	iframe {
 		width: 133.333px;
 		height: 100px;
@@ -55,58 +62,36 @@ iframe {
 		width: 215px;
 		height: 60px;
 	}
+	li#sim-genres-list {
+		width: 50%;
+	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 415px) and (max-width: 550px) {
 	iframe {
-		width: px;
+		width: 200px;
 		height: 150px;
 	}
 	div#standard {
 		width: 215px;
-		height: 60px;
-	}
-}
-*/
-@media screen and (max-width: 415px) {
-	iframe {
-		width: 533.3333px;
-		height: 400px;
-	}
-	div#standard {
-		width: 550px;
-		height: 210px;
+		height: 25px;
 	}
 	li#sim-genres-list {
-	width: 50%;
+		width: 50%;
 	}
 }
 
-@media screen and (min-width: 415px) and (max-width: 600px) {
+@media screen and (min-width: 550px) and (max-width: 800px) {
 	iframe {
 		width: 420px;
 		height: 315px;
 	}
 	div#standard {
-		width: 450px;
-		height: 210px;
+		width: 445px;
+		height: 123px;
 	}
 	li#sim-genres-list {
-	width: 50%;
-	}
-}
-
-@media screen and (min-width: 600px) and (max-width: 800px) {
-	iframe {
-		width: 420px;
-		height: 315px;
-	}
-	div#standard {
-		width: 450px;
-		height: 210px;
-	}
-	li#sim-genres-list {
-	width: 50%;
+		width: 50%;
 	}
 }
 
