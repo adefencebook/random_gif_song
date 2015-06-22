@@ -3,6 +3,7 @@ body {
   text-align: center;
   color: white;
   font-family: 'Roboto', arial;
+  white-space: nowrap;
 }
 
 h5 {
@@ -10,6 +11,7 @@ h5 {
 	margin-left: 5%;
 	margin-right: 5%;
 	font-weight: 200;
+	white-space: normal;
 }
 
 h3.pick-genre-text {
@@ -41,7 +43,7 @@ li#sim-genres-list {
 div#standard{
 	border-style: double;
 	border-color: white;
-	width: 860px;
+	width: 868px;
 	height: 440px;
 	padding:3px;
 	margin: auto;
@@ -55,15 +57,18 @@ iframe {
 
 @media screen and (max-width: 415px) {
 	iframe {
-		width: 133.333px;
-		height: 100px;
+		width: 310px;
+		height: 232px;
 	}
 	div#standard {
-		width: 215px;
+		width: 290px;
 		height: 60px;
 	}
 	li#sim-genres-list {
 		width: 50%;
+	}
+	body, p#explicit {
+		font-size: 85%;
 	}
 }
 
@@ -88,10 +93,13 @@ iframe {
 	}
 	div#standard {
 		width: 445px;
-		height: 123px;
+		height: 135px;
 	}
 	li#sim-genres-list {
 		width: 50%;
+	}
+	body, p#explicit {
+		font-size: 90%;
 	}
 }
 
@@ -101,7 +109,7 @@ iframe {
 		height: 400px;
 	}
 	div#standard {
-		width: 550px;
+		width: 558px;
 		height: 210px;
 	}
 }
