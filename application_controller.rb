@@ -17,6 +17,7 @@ class ApplicationController < Sinatra::Base
 	@sim_genres = results.find_similar_genres
 	@descrip = results.find_description
 	erb :results_page
+	binding.pry
   end
   
 end
