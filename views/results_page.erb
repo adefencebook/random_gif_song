@@ -28,14 +28,17 @@
     	<li id="sim-genres-list"><%=genre[:name]%></li>
     <%end%>
 	</ul>
-	<br><br><br>
-	<div class="pick-genre-text">
-    	<h3 class="pick-genre-text">Pick another genre!</h3>
-    </div>
     <form action="/results" method="post">
+    	<label>Pick another genre!</label>
+    	<br>
 		<input type="text" name="genre">
 		<input type="submit">
 	</form>
+	<br>
+	<form action="/results" method="post">
+			<label>And now for something completely different.</label>
+			<button value="submit">Random genre!</button>
+		</form>
    </div>
   </body>
 </html>

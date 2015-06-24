@@ -2,11 +2,21 @@ require_relative 'song.rb'
 require_relative 'youtube_scraper.rb'
 
 class HomepageAPI
-	attr_accessor :songs, :videos, :what_is_genre, :description, :genre
+	attr_accessor :songs, :videos, :what_is_genre, :description, :genre, :random
 
-	def initialize(genre)
+	def initialize(genre=nil)
+		@array = []
+		if genre != nil
+			@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', genre.downcase)
+			genre = genre.downcase
+		else
+			self.all_genres_array
+			random = self.find_random
+			@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', random.downcase)
+			genre = random.downcase
+		end
 		@what_is_genre = genre
-		@genre = Echonest::Genre.new('S0XF9YS0UTCYEHQFQ', genre.downcase)
+		@random = nil
 		@artists = []
 		@names = []
 		@songs = []
@@ -34,6 +44,13 @@ class HomepageAPI
 				:video => nil,
 			}
 		}
+	end
+
+	def all_genres_array
+		list = Echonest::Genre.list('S0XF9YS0UTCYEHQFQ')
+		list[:genres].each do |genre|
+			@array << genre[:name]
+		end
 	end
 
 	def get_random_artists
@@ -85,5 +102,10 @@ class HomepageAPI
 	def find_description
 		@description = @genre.profile(bucket: "description")[:genres][0][:description]
 		@description
+	end
+
+	def find_random
+		@random = @array.sample
+		@random
 	end
 end

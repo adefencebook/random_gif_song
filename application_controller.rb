@@ -16,8 +16,8 @@ class ApplicationController < Sinatra::Base
 	@both = results.song_video_hash
 	@sim_genres = results.find_similar_genres
 	@descrip = results.find_description
+	@random = results.find_random
 	erb :results_page
-	binding.pry
   end
-  
+
 end
